@@ -5,3 +5,5 @@ from django.http  import HttpResponse,Http404
 def welcome(request):
     return render(request, 'welcome.html')
 
+def feed(request):
+    return render(request, 'timeline.html')
