@@ -12,3 +12,9 @@ class Image(models.Model):
     img_name = models.CharField(max_length= 30)
     img_caption = models.TextField()
     profile = models.ForeignKey(Profile)
+
+    @classmethod
+    def newsfeed(cls):
+        images = cls.objects.all()
+        return images
+
