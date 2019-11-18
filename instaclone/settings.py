@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'instagram.apps.InstagramConfig',
     'bootstrap4',
+    'pyuploadcare.dj',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -69,6 +70,11 @@ TEMPLATES = [
     },
 ]
 
+UPLOADCARE = {
+    'pub_key': '7060a3f658cef0beefb3',
+    'secret': '246523dc82608e633f5d',
+}
+
 WSGI_APPLICATION = 'instaclone.wsgi.application'
 
 
@@ -77,8 +83,10 @@ WSGI_APPLICATION = 'instaclone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'instagrid',
+        'USER': 'isaac',
+    'PASSWORD':'5272',
     }
 }
 
@@ -107,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
