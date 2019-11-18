@@ -1,5 +1,7 @@
 from django.db import models
 from pyuploadcare.dj.models import ImageField
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 
@@ -11,7 +13,7 @@ class Image(models.Model):
     img = ImageField( blank = True, manual_crop = '1080x1080')
     img_name = models.CharField(max_length= 30)
     img_caption = models.TextField()
-    profile = models.ForeignKey(Profile)
+    profile = models.ForeignKey(User,on_delete=models.CASCADE)
 
     @classmethod
     def newsfeed(cls):
