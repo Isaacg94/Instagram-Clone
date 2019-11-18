@@ -1,18 +1,18 @@
 {%extends 'base.html'%}
-
+{% load static%}
 {% block content %}
 {{block.super}}
 
-<div class="container">
+<div class="container" style="width: 70%;">
     <!-- Looping through news   -->
   {% for image in images %}
-  <div class="card text-center">
+  <div class="card text-center" style="width: 70%; margin-top: 8%">
         <div class="card-body">
           Featured
         </div>
         <img src="{{image.img.cdn_url}}" class="card-img" alt="Image" style="border-radius: 0px;">
         <div class="card-body">
-                {{ image.img_name }}
+                <h1>{{ image.img_name }}</h1>
         </div>
       </div>
 

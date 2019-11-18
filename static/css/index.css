@@ -1,5 +1,5 @@
 body {
-    background-color: bisque;
+    background-color: #fafafa;
 }
 
 h1
@@ -10,6 +10,9 @@ h1
 @media only screen and (max-width: 766px) {
     
     .border-rt {
+        display: none;
+    }
+    .navbar-form {
         display: none;
     }
     
