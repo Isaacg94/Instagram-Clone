@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'instagram.apps.InstagramConfig',
     'bootstrap4',
     'pyuploadcare.dj',
+    'tinymce',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
