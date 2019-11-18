@@ -18,3 +18,8 @@ class Image(models.Model):
         images = cls.objects.all()
         return images
 
+    # @classmethod
+    # def search_by_user(cls,search_term):
+    #     user = cls.objects.filter(title__icontains=search_term)
+    #     return user
+
