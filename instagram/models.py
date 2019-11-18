@@ -8,7 +8,7 @@ class Profile(models.Model):
     profile_pic = ImageField( blank = True)
 
 class Image(models.Model):
-    img = models.ImageField(upload_to='feed/')
+    img = ImageField( blank = True, manual_crop = '1080x1080')
     img_name = models.CharField(max_length= 30)
     img_caption = models.TextField()
     profile = models.ForeignKey(Profile)
