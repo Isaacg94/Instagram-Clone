@@ -6,14 +6,15 @@
 <div class="container">
     <!-- Looping through news   -->
   {% for image in images %}
-
-  <div class="row">
-    <!-- displaying News articles -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"> {{ image.img_name }} </h2>
-    </div>
-
-  </div>
+  <div class="card text-center">
+        <div class="card-body">
+          Featured
+        </div>
+        <img src="{{image.img.cdn_url}}" class="card-img" alt="Image" style="border-radius: 0px;">
+        <div class="card-body">
+                {{ image.img_name }}
+        </div>
+      </div>
 
   {% empty %}
   <div class="row">
