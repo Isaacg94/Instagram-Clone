@@ -23,7 +23,6 @@ This is a web application that mimics the Instagram experience, built with Djang
 * Users can like and comment on a post.
 * Users can upload posts and edit their profile.
 * Users can view other users profle pages and full details of an image by clicking on the image.
-* 
 
 **[Live-Link to site.](https://insta-clone-by-isaac.herokuapp.com/)**
 
