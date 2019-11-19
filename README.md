@@ -1,8 +1,7 @@
 
 
 <a href="https://fontmeme.com/thrasher-font/"><img
-            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png" alt=""
-            width="60%" style="padding-left: 10px;"></a>
+            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png" alt=""></a>
 
 
 
