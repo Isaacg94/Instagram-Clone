@@ -28,3 +28,10 @@ def new_image(request):
     else:
         form = NewImageForm()
     return render(request, 'upload.html', {"form": form})
+
+def profile(request,profile_id):
+    try:
+        profile = Profile.objects.get(id = profile_id)
+    except self.DoesNotExist:
+        raise Http404()
+    return render(request,"profile.html", {"profile":profile})
