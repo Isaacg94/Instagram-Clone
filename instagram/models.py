@@ -7,10 +7,11 @@ from tinymce.models import HTMLField
 
 class Profile(models.Model):
     bio = HTMLField()
-    profile_pic = ImageField( blank = True)
+    profile_pic = ImageField()
+    user = models.OneToOneField(User,on_delete=models.CASCADE, primary_key=True)
 
 class Image(models.Model):
-    img = ImageField( blank = True, manual_crop = '1080x1080')
+    img = ImageField(manual_crop ='1080x1080')
     img_name = models.CharField(max_length= 30)
     img_caption = models.TextField()
     profile = models.ForeignKey(User,on_delete=models.CASCADE)

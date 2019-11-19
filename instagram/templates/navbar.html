@@ -21,7 +21,7 @@
             width="60%" style="padding-left: 10px;"></a>
       </div>
       <!-- Adding a search form  -->
-      <div class="col-sm-4 col-md-4 mx-auto d-block text-center w-100">
+      <div class="col-sm-3 col-md-3 mx-auto d-block text-center w-100">
 
         <form class="navbar-form" role="search" action="">
 
@@ -42,18 +42,18 @@
       <!-- search form end -->
       <div class="">
         {% if user.is_authenticated %}
-        <ul>
-          <li class="dropdown">
+        <div>
+          <div class="dropdown">
             <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button"
-              aria-expanded="false">Account
+              aria-expanded="false"><img src="https://img.icons8.com/pastel-glyph/80/000000/gender-neutral-user.png" width="40px">
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
               <li>
-                <a href="{%url 'newsToday'%}">Home</a>
+                <a href="{%url 'feed'%}">Home</a>
               </li>
               <li>
-                <a href="{%url 'new-article'%}">Create Article</a>
+                <a href="{%url 'new-image'%}">Upload Image</a>
               </li>
               <li>
                 <a href="/accounts/password/change">Change Password</a>
@@ -62,8 +62,8 @@
                 <a href="/logout">Logout</a>
               </li>
             </ul>
-          </li>
-        </ul>
+          </div>
+        </div>
         {% else %}
         <li>
           <a class='btn btn-default' href="/accounts/login">Login</a>
