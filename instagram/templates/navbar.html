@@ -52,6 +52,10 @@
               <li>
                 <a href="{%url 'feed'%}" style="color: black;">Home</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link open-nav" href="{% url 'profile' username=user %}">Profile</a>
+
+            </li>
               <li>
                 <a href="{%url 'new-image'%}"style="color: black;">Upload Image</a>
               </li>

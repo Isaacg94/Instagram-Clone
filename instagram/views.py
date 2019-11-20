@@ -3,6 +3,7 @@ from django.http  import HttpResponse,Http404
 from .models import Image, Profile
 from django.contrib.auth.decorators import login_required
 from .forms import NewImageForm
+from django.contrib.auth.models import User
 
 
 # Create your views here.
