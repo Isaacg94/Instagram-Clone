@@ -25,6 +25,11 @@ class Profile(models.Model):
     def delete_profile(self):
         self.delete()
 
+    @classmethod
+    def get_by_id(cls, id):
+        profile = Profile.objects.get(user = id)
+        return profile
+
 
     @classmethod
     def filter_by_id(cls, id):
