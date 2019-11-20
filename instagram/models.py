@@ -10,6 +10,21 @@ class Profile(models.Model):
     profile_pic = ImageField()
     user = models.OneToOneField(User,on_delete=models.CASCADE, primary_key=True)
 
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()
+
+    def save_profile(self):
+        self.save()
+
+    def delete_profile(self):
+        self.delete()
+
 
     @classmethod
     def filter_by_id(cls, id):
