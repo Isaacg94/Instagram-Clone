@@ -35,6 +35,7 @@ def profile(request, username):
     title = "Profile"
     profile = User.objects.get(username=username)
     users = User.objects.get(username=username)
+
     try :
         profile_details = Profile.get_by_id(profile.id)
     except:

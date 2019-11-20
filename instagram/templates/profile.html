@@ -13,6 +13,23 @@
             <img src="https://img.icons8.com/ios-filled/80/000000/user-male-circle.png" alt="">
             {% endif %}
         </div>
+        <div class="col-md-6">
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <span><h4><strong>{{profile.username}}</strong></h4></span>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="row mt-5">
+        {% for image in images %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div>
+                <img src="{{image.img.cdn_url}}" alt="">
+            </div>
+        </div>
+        {%endfor%}
     </div>
 
 </div>
