@@ -8,7 +8,7 @@
     <div class="row wide mt-5">
         <div class="col-md-6">
             {% if profile_details.profile_pic %}
-            <img src="{{profile_details.profile_pic.cdn_url}}" alt="">
+            <img src="{{profile_details.profile_pic.cdn_url}}" class="img-fluid" alt="" style="object-fit: cover; object-position: 100% 0; width: 180px; height: 180px; border-radius: 50%;">
             {% else %}
             <img src="https://img.icons8.com/ios-filled/80/000000/user-male-circle.png" alt="">
             {% endif %}
@@ -18,6 +18,11 @@
                 <li class="list-inline-item">
                     <span><h4><strong>{{profile.username}}</strong></h4></span>
                 </li>
+                {% if profile.username == user.username %}
+                <li class="list-inline-item">
+                    <a href="{% url 'edit_profile' %}" class="btn btn-sm btn-outline-dark"><strong>Edit Profile</strong></a>
+                </li>
+                {%endif%}
                 
             </ul>
         </div>
@@ -26,7 +31,7 @@
         {% for image in images %}
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div>
-                <img src="{{image.img.cdn_url}}" alt="">
+                <img src="{{image.img.cdn_url}}" alt="" class="img-fluid">
             </div>
         </div>
         {%endfor%}
