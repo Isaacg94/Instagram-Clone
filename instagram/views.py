@@ -41,6 +41,6 @@ def profile(request, username):
     except:
         profile_details = Profile.filter_by_id(profile.id)
 
-
-    return render(request, 'profile.html', {'title':title,'profile':profile, 'profile_details':profile_details})
+    images = Image.get_profile_pics(profile.id)
+    return render(request, 'profile.html', {'title':title,'profile':profile, 'profile_details':profile_details, 'images':images})
 
