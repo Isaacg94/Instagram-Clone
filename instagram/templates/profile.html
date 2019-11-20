@@ -5,7 +5,15 @@
 {% block content %}
 
 <div class="container">
-    
+    <div class="row wide mt-5">
+        <div class="col-md-6">
+            {% if profile_details.profile_pic %}
+            <img src="{{profile_details.profile_pic.cdn_url}}" alt="">
+            {% else %}
+            <img src="https://img.icons8.com/ios-filled/80/000000/user-male-circle.png" alt="">
+            {% endif %}
+        </div>
+    </div>
 
 </div>
 
